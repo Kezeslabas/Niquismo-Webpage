@@ -353,8 +353,8 @@
             <p><em><q>Best place on the planet.</q></em></p>
             <p><i>- Tatiana</i></p>
         </div>
-        <a href="">Leave a comment >></a>
-        <div class="commform">
+        <button onclick="myFunction()">Leave a comment >></button>
+        <div class="commform" id="commform">
         <!-- Comments form-->
         <h3>Leave a comment for us!</h3>
         <form action="">
@@ -363,6 +363,16 @@
             <input type="submit" value="Send">
           </form>
         </div>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("commform");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          </script>
     </section>
 
     <section id="contactus" class="container-fluid">
