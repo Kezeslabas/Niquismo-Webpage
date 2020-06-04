@@ -17,3 +17,12 @@
 // Draw Out Article preview
 
 // Draw out Gallery Preview
+
+function addComment() {
+    var x = document.getElementById("commform");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
