@@ -353,7 +353,7 @@
             <p><em><q>Best place on the planet.</q></em></p>
             <p><i>- Tatiana</i></p>
         </div>
-        <button onclick="myFunction()">Leave a comment >></button>
+        <button onclick="addComment()">Leave a comment >></button>
         <div class="commform" id="commform">
         <!-- Comments form-->
         <h3>Leave a comment for us!</h3>
@@ -364,7 +364,7 @@
           </form>
         </div>
         <script>
-          function myFunction() {
+          function addComment() {
             var x = document.getElementById("commform");
             if (x.style.display === "block") {
               x.style.display = "none";
