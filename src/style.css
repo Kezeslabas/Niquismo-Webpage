@@ -227,6 +227,7 @@
     margin: 10px auto;
     padding: 20px;
     font-family: Georgia, "Times New Roman", Times, serif;
+    display: none;
   }
 
   .commform h3 {
@@ -263,7 +264,7 @@
   }
 
   .commform input[type="submit"] {
-    position: relative;
+  position: relative;
 	display: block;
 	padding: 19px 39px 18px 39px;
 	color: #FFF;
