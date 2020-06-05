@@ -382,4 +382,37 @@
     color: #ccc;
   }
   
- 
+/* Articles HTML styling */
+
+#articlespage {
+  padding-top:70px;
+  padding-bottom:70px;
+  position: relative;
+}  
+
+.art-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+  }
+
+  .art-gchild-img {
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+  }
+
+  .art-gchild-img img {
+    object-fit: cover;
+    width:100px;
+    height:100px;
+  }
+
+  .art-gchild-artl {
+    background-color:white;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    height: 100px;
+  }
