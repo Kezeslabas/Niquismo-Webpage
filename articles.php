@@ -25,13 +25,13 @@
 
       <nav class="navbar bg-dark navbar-dark fixed-top" id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#aboutus">About Us</a></li>
-          <li><a href="index.html#articles">Articles</a></li>
-          <li><a href="index.html#services">Our Services</a></li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#contactus">Contact Us</a></li>
-          <li><a href="shops.html">Stores</a></li>
+          <li class="menu-active"><a href="index.php#hero">Home</a></li>
+          <li><a href="index.php#aboutus">About Us</a></li>
+          <li><a href="index.php#articles">Articles</a></li>
+          <li><a href="index.php#services">Our Services</a></li>
+          <li><a href="index.php#gallery">Gallery</a></li>
+          <li><a href="index.php#contactus">Contact Us</a></li>
+          <li><a href="shops.php">Stores</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
