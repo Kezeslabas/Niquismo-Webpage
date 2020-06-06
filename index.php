@@ -13,31 +13,34 @@
 
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<!-- Elv ez itt össze fog akadni -->
-<!-- Ez a sor tök új -->
-<!-- Tesztelem csak a github-ot -->
-    <!-- Az új cucc a master-ről -->
+    
+    <?php
+      // Get Article Contents (only first 3 articles)
+      $contents = file("./src/data/articles.cnt");
+      echo('<div id="art_data" style="display:none">');
+      $length = count($contents);
+      if($length > 3)$length = 3;
+      for($i = 0; $i<$length; $i++)
+      {
+        echo($contents[$i]);
+      }
+      echo('</div>');
+
+      // Get Comment Contents
+      $contents = file_get_contents("./src/data/comments.cnt");
+      echo('<div id="comm_data" style="display:none">'.$contents.'</div>');
+
+    ?>
 
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <header>
 
-         <!--==========================
-        Hero Section
-        ============================-->
-        <section id="hero">
-        <div class="hero-container">
-         <h1>Welcome to Niquismo</h1>
-        </div>
-        </section><!-- #hero -->
 
   <main id="main">
 
     <header id="header">
         <div class="container">
-    
-    
           <nav class="navbar bg-dark navbar-dark fixed-top" id="nav-menu-container">
             <ul class="nav-menu">
               <li class="menu-active"><a href="#hero">Home</a></li>
@@ -52,6 +55,14 @@
         </div>
       </header><!-- #header -->
 
+      <!--==========================
+      Hero Section
+      ============================-->
+      <section id="hero">
+      <div class="hero-container">
+        <h1>Welcome to Niquismo</h1>
+      </div>
+      </section><!-- #hero -->
  
     <section id="aboutus" class="container-fluid">
         <div>
@@ -386,7 +397,7 @@
         </form>
         </div>
     </section>
-
+    </main>
     <!--==========================
     Footer
   ============================-->

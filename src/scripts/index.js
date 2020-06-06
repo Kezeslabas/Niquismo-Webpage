@@ -17,6 +17,18 @@
 // Draw Out Article preview
 
 // Draw out Gallery Preview
+GetArticleData();
+GetCommentData();
+
+function GetArticleData()
+{
+  var data = document.getElementById('art_data').textContent;
+
+}
+function GetCommentData()
+{
+  var data = document.getElementById('comm_data').textContent;
+}
 
 function addComment() {
     var x = document.getElementById("commform");
