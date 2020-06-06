@@ -48,6 +48,7 @@ function FillInComments(getData)
   var content = getData();
 
   var target = document.getElementById('commentbox');
+  target.innerHTML="";
   var div = null;
 
   for(i=0;i<content.length;i++)
@@ -59,10 +60,15 @@ function FillInComments(getData)
     '<p><i>- '+item.name+'</i></p>';
     if(i==0)div.classList.add('visible');
     else div.classList.add('hidden');
+
     target.appendChild(div);
   }
 
+}
 
+function getContactUsInfo()
+{
+  var
 }
 
 function addComment() {

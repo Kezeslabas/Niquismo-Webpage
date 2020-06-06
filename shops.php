@@ -14,8 +14,11 @@
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-
-
+    <?php
+      // Get Shop Contents
+      $contents = file_get_contents("./src/data/stores.cnt");
+      echo('<div id="store_data" style="display:none">'.$contents.'</div>');
+    ?>
 </head>
 <body>
     

@@ -204,7 +204,7 @@
             <option value="other">Other</option>
             </select>      
             <textarea name="field3" rows="10" placeholder="Tell us your problems or questions and we will answer them in an email."></textarea>
-            <input type="submit" value="Send" />
+            <input type="submit" value="Send" onclick="getContactUsInfo()"/>
         </form>
         </div>
     </section>

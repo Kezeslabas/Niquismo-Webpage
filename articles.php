@@ -14,7 +14,11 @@
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-
+    <?php
+      // Get Article Contents (only first 3 articles)
+      $contents = file_get_contents("./src/data/articles.cnt");
+      echo('<div id="art_data" style="display:none">'.$contents.'</div>');
+    ?>
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -41,7 +45,7 @@
         
     <div>
         <h2>Latest Articles</h2>
-        <div class="art-grid-container">
+        <div id="articlelist" class="art-grid-container">
             <div class="art-gchild-img">
                 <img src="https://i.pinimg.com/originals/11/2b/74/112b746a2182417b2a947d949798c968.jpg" alt="flower">
             </div>
@@ -115,5 +119,5 @@
         </div>
       </footer><!-- #footer -->
 </body>
-<script src="./src/scripts/index.js"></script>
+<script src="./src/scripts/articles.js"></script>
 </html>
