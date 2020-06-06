@@ -83,8 +83,8 @@
     float: left;
   }
   
-  .nav-menu li:hover > ul,
-  .nav-menu li.sfHover > ul {
+  
+  .nav-menu li.sfHover {
     display: block;
   }
   
@@ -203,11 +203,30 @@
     padding-bottom:70px
   }
 
-  #customers {
-    padding-top:70px;
-    padding-bottom:70px;
-    background-color: #9AA056;
+  /* Gallery */
+  
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
   }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Customer feedback */
 
   .commdis {
     background-color: white;
@@ -269,18 +288,18 @@
 	padding: 19px 39px 18px 39px;
 	color: #FFF;
 	margin: 0 auto;
-	background:darkolivegreen;
+	background: #3cb371;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
 	width: 50%;
-	border: 1px solid darkolivegreen;
+	border: 1px solid #3cb371;
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;
   }
 
   .commform input[type="submit"] :hover {
-    background: rgb(58, 73, 32);
+    background: #3cb371;
   }
 
 
@@ -345,7 +364,7 @@
     padding: 19px 39px 18px 39px;
     color: #FFF;
     margin: 0 auto;
-    background: #9AA056;
+    background: #00ff7f;
     font-size: 18px;
     text-align: center;
     font-style: normal;
@@ -357,7 +376,7 @@
   .contactform input[type="submit"]:hover,
   .contactform input[type="button"]:hover
   {
-    background: rgb(90, 94, 50);
+    background: #3cb371;
   }
 
 
