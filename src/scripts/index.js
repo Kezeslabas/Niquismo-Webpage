@@ -68,7 +68,6 @@ function FillInComments(getData)
 
 function getContactUsInfo()
 {
-  var
 }
 
 function addComment() {
