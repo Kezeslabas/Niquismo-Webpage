@@ -120,52 +120,75 @@
         </div> 
         
     </section> -->
-<section id="gallery" class="container-fluid">
 
-      <h2>Gallery</h2>
-    <div class="gallery">
-  <a target="_blank" href="res/plant4.jpg">
-    <img src="res/plant4.jpg" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Dat plant</div>
+<!-- Gallery -->
+<section id="gallery">
+<h2 style="text-align:center">Gallery</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="res/plant7.jpg" style="width:100% " onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="res/planz8.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="res/ULTIMA.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="res/plant10.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
 </div>
 
-<div class="gallery">
-  <a target="_blank" href="res/plant1.jpg">
-    <img src="res/plant1.jpg" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">A plant</div>
-</div>
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
-<div class="gallery">
-  <a target="_blank" href="res/plant2.jpg">
-    <img src="res/plant2.jpg" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">And another one</div>
-</div>
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="res/plant7.jpg" style="width:100%">
+    </div>
 
-<div class="gallery">
-  <a target="_blank" href="res/plant3.jpg">
-    <img src="res/plant3.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">AND ANOTHER ONE</div>
-</div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="res/planz8.jpg" style="width:100%">
+    </div>
 
-<div class="gallery">
-  <a target="_blank" href="res/plant5.jpg">
-    <img src="res/plant5.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">HELL YEAH PLANTS</div>
-</div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="res/ULTIMA.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="res/plant10.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-<div class="gallery">
-  <a target="_blank" href="res/plant6.jpg">
-    <img src="res/plant6.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Bestest plant</div>
-</div>
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
 
-</section>
+
+    <div class="column">
+      <img class="demo cursor" src="res/plant7.jpg" style="width: 100%" onclick="currentSlide(1)" alt="OH NOOO!!!!">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="res/planz8.jpg" style="width: 100%" onclick="currentSlide(2)" alt="NIGERUNDAYO">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="res/ULTIMA.jpg" style="width:100%" onclick="currentSlide(3)" alt="THE ULTIMATE LIFEFORM">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="res/plant10.jpg" style="width:100%" onclick="currentSlide(4)" alt="YARE YARE DAZE">
+    </div>
+  </div>
+</div>
+    </section>
+ 
+<!-- Customers -->
 
     <section id="customers" class="container-fluid">
         <h2>Customer feedback</h2>
@@ -176,7 +199,7 @@
               <p><i>- Tatiana</i></p>
             </div>
         </div>
-        <button onclick="addComment()">Leave a comment >></button>
+        <button class="button" onclick="addComment()">Leave a comment >></button>
         <div class="commform" id="commform">
         <!-- Comments form-->
         <h3>Leave a comment for us!</h3>
