@@ -360,10 +360,12 @@
     </section>
     <section id="customers" class="container-fluid">
         <h2>Customer feedback</h2>
-        <div class="commdis">
+        <div id="commentbox" class="commdis">
         <!-- Comments display-->
-            <p><em><q>Best place on the planet.</q></em></p>
-            <p><i>- Tatiana</i></p>
+            <div>
+              <p><em><q>Best place on the planet.</q></em></p>
+              <p><i>- Tatiana</i></p>
+            </div>
         </div>
         <button onclick="addComment()">Leave a comment >></button>
         <div class="commform" id="commform">
