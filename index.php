@@ -49,7 +49,7 @@
               <li><a href="#services">Our Services</a></li>
               <li><a href="#gallery">Gallery</a></li>
               <li><a href="#contactus">Contact Us</a></li>
-              <li><a href="shops.html">Stores</a></li>
+              <li><a href="shops.php">Stores</a></li>
             </ul>
           </nav><!-- #nav-menu-container -->
         </div>
@@ -77,13 +77,13 @@
 
     <section id="articles" class="container-fluid">
         <!-- a címet raktam be linknek a galéria laphoz, nyugodtan bíráld felül -->
-        <a href="articles.html"><h2>Latest Articles</h2></a>
+        <a href="articles.php"><h2>Latest Articles</h2></a>
         <div>
             <article>Article 1</article>
             <article>Article 2</article>
             <article>Article 3</article>
         </div>
-        <a href="articles.html">more articles >></a>
+        <a href="articles.php">more articles >></a>
     </section>
 
     <section id="services" class="container-fluid">
@@ -98,7 +98,7 @@
             congue quisque egestas diam. 
         </p>
         <a href="#contactus">Contact Us >></a>
-        <a href="shops.html">Stores >></a>
+        <a href="shops.php">Stores >></a>
     </section>
 
 
