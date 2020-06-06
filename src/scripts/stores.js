@@ -1,4 +1,4 @@
-fillStoreList(getStoreData);
+//fillStoreList(getStoreData);
 
 function fillStoreList(getData)
 {

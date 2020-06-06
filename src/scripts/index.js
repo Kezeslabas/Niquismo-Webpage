@@ -13,7 +13,6 @@ FillInComments(GetCommentData);
 // Draw Out Article preview
 
 // Draw out Gallery Preview
-GetArticleData();
 
 // Request data 
 function GetArticleData()
@@ -68,6 +67,7 @@ function FillInComments(getData)
 
 function getContactUsInfo()
 {
+
 }
 
 function addComment() {

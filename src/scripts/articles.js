@@ -1,5 +1,5 @@
 
-fillArticleList(getArticleData);
+//fillArticleList(getArticleData);
 
 
 function getArticleData()
