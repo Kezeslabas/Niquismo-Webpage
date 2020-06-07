@@ -222,11 +222,11 @@
 
     <section id="customers" class="container-fluid">
         <h2>Customer feedback</h2>
-        <div id="commentbox" class="commdis">
+        <div class="commdis">
         <!-- Comments display-->
         <div class="commentcontainer">
           <div id="carouselContent" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
+            <div id="commentbox" class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                  <q>Best place on earth.</q>
                  <p class="commentp">- Tatiana</p>
