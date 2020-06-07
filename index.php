@@ -5,7 +5,7 @@
     <title>Niquismo</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Scrollspy-hoz kell-->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -77,13 +77,43 @@
 
     <section id="articles" class="container-fluid">
         <!-- a címet raktam be linknek a galéria laphoz, nyugodtan bíráld felül -->
-        <a href="articles.php"><h2>Latest Articles</h2></a>
-        <div>
-            <article>Article 1</article>
-            <article>Article 2</article>
-            <article>Article 3</article>
+        <a href="articles.php" class="arthead"><h2>Latest Articles</h2></a>
+        <div id="articleprev" class="artp-grid-container">
+            <div class="artp-gchild">
+                <p class="arttit">Title</p>
+                <p class="artdat">2020-06-07</p>
+                <p class="artpar">Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. 
+                Faucibus purus in massa tempor nec. 
+                Sapien et ligula ullamcorper malesuada proin 
+                libero. In eu mi bibendum neque egestas 
+                congue quisque egestas diam.</p>
+            </div>
+            <div class="artp-gchild">
+                <p class="arttit">Title</p>
+                <p class="artdat">2020-06-07</p>
+                <p class="artpar">Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. 
+                Faucibus purus in massa tempor nec. 
+                Sapien et ligula ullamcorper malesuada proin 
+                libero. In eu mi bibendum neque egestas 
+                congue quisque egestas diam.</p>
+              </div>
+            <div class="artp-gchild">
+                <p class="arttit">Title</p>
+                <p class="artdat">2020-06-07</p>
+                <p class="artpar">Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. 
+                Faucibus purus in massa tempor nec. 
+                Sapien et ligula ullamcorper malesuada proin 
+                libero. In eu mi bibendum neque egestas 
+                congue quisque egestas diam.</p>
+              </div>
         </div>
-        <a href="articles.php">more articles >></a>
+        <button class="button"><a class="artbut" href="articles.php">More Aricles >></a></button>
     </section>
 
     <section id="services" class="container-fluid">
@@ -194,11 +224,29 @@
         <h2>Customer feedback</h2>
         <div id="commentbox" class="commdis">
         <!-- Comments display-->
-            <div>
-              <p><em><q>Best place on the planet.</q></em></p>
-              <p><i>- Tatiana</i></p>
+        <div class="commentcontainer">
+          <div id="carouselContent" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                 <q>Best place on earth.</q>
+                 <p class="commentp">- Tatiana</p>
+              </div>
+              <div class="carousel-item">
+                  <q>Yes</q>
+                  <p class="commentp">- Chad</p>
+              </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
+
         <button class="button" onclick="addComment()">Leave a comment >></button>
         <div class="commform" id="commform">
         <!-- Comments form-->
@@ -213,23 +261,44 @@
 
     <section id="contactus" class="container-fluid">
         <h2>Contact Us</h2>
-        <div class="contactform">
-        <form action="">
-            <input type="text" name="cname" placeholder="Your Name *">
-            <input type="email" name="cemail" placeholder="Your Email *">
-            <label for="job">Client organization:</label>
-            <select id="job" name="field4">
-            <option value="enterprise">Enterprise</option>
-            <option value="company">Company</option>
-            <option value="pubinst">Public Institution</option>
-            <option value="nonprof">Non-profit Organization</option>
-            <option value="privpers">Private Person</option>
-            <option value="other">Other</option>
-            </select>      
-            <textarea name="field3" rows="10" placeholder="Tell us your problems or questions and we will answer them in an email."></textarea>
-            <input type="submit" value="Send" onclick="getContactUsInfo()"/>
-        </form>
-        </div>
+          <div class="contactform">
+          <form action="">
+              <input type="text" name="cname" placeholder="Your Name *">
+              <input type="email" name="cemail" placeholder="Your Email *">
+              <label for="job">Client organization:</label>
+              <select id="job" name="field4">
+              <option value="enterprise">Enterprise</option>
+              <option value="company">Company</option>
+              <option value="pubinst">Public Institution</option>
+              <option value="nonprof">Non-profit Organization</option>
+              <option value="privpers">Private Person</option>
+              <option value="other">Other</option>
+              </select>      
+              <textarea name="field3" rows="10" placeholder="Tell us your problems or questions and we will answer them in an email."></textarea>
+              <input type="submit" value="Send" onclick="getContactUsInfo()"/>
+          </form>
+          </div>
+          <div class="continfo">
+            <p class="conthead">Give us a call:</p>
+            <p class="conttel">+23 45 3456 896</p>
+            <p class="conttel">+11 22 3274 901</p>
+            <p class="conttel">+66 66 6666 666</p>
+            <p class="conthead">Or visit one of our stores:</p>
+            <a class="strbut" href="shops.php"><button class="strbutton">Our Stores >></button></a>
+            <p class="conthead">Follow us on social media:</p>
+            <a class="slogolink" href="facebook.com/niquismo">
+            <img class="slogo" src="https://cdn1.iconfinder.com/data/icons/social-media-2285/512/Colored_Facebook3_svg-512.png" alt="facebook">
+            </a>
+            <a class="slogolink" href="instagram.com/niquismo">
+            <img class="slogo" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png" alt="">
+            </a>
+            <a class="slogolink" href="twitter.com/niquismo">
+            <img class="slogo" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-512.png" alt="">
+            </a>
+            <a class="slogolink" href="youtube.com/niquismo">
+            <img class="slogo" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png" alt="">
+            </a>
+          </div>
     </section>
     </main>
     <!--==========================

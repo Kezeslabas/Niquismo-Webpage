@@ -198,13 +198,75 @@
   
   }
 
+  /*Articles section*/
+
   #articles {
     padding-top:70px;
     padding-bottom:70px;
     padding-right: 70px;
     padding-left: 70px;
+  } 
+
+  a.arthead:link,
+  a.arthead:visited,
+  a.arthead:hover,
+  a.arthead:active {
+    color: black;
   }
 
+  #articleprev {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+  }
+
+  .artp-gchild {
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .artp-gchild:hover,
+  .artp-gchild:focus {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  p.arttit {
+    color: black;
+    font-size: 20px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    margin-top: 10px;
+  }
+
+  p.artdat {
+    color: black;
+    font-size: 10px; 
+    font-style: italic;
+    margin-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  p.artpar {
+    color: black;
+    font-size: 14px; 
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  a.artbut:link,
+  a.artbut:visited,
+  a.artbut:hover,
+  a.artbut:active {
+    color: white;
+  }
+
+
+  /*Services section*/
+ 
   #services {
     padding-top:70px;
     padding-bottom:70px;
@@ -222,18 +284,6 @@
     padding-right: 70px;
     padding-left: 70px;
   }
-
-#contactus {
-  padding-right: 70px;
-  padding-left: 70px;
-}
-
-#customers {
-
-  padding-right: 70px;
-  padding-left: 70px;
-}
-
 
   /* Gallery */
   
@@ -372,33 +422,69 @@
   }
 
   /* Customer feedback */
-
-  .button {
-  position: relative;
-	display: block;
-	padding: 19px 39px 18px 39px;
-	color: #FFF;
-	margin: 0 auto;
-	background: #3cb371;
-	font-size: 18px;
-	text-align: center;
-	font-style: normal;
-	width: 30%;
-	border: 1px solid #3cb371;
-	border-width: 1px 1px 3px;
-	margin-bottom: 10px;
+  
+  #customers {
+    padding-top:70px;
+    padding-bottom:70px;
+    padding-right: 70px;
+    padding-left: 70px;
   }
 
-  .commdis {
+  /*Comments container*/
+  #commdis {
     background-color: white;
     height: auto;
-    width: 40%;
     margin: auto;
     padding: 15px;
     text-align: center;
-    border-radius: 20px;
+  } 
+  
+  .button {
+    position: relative;
+  	display: block;
+  	padding: 19px 39px 18px 39px;
+	  color: #FFF;
+	  margin: 0 auto;
+	  background: #3cb371;
+  	font-size: 18px;
+	  text-align: center;
+  	font-style: normal;
+  	width: 30%;
+	  border: 1px solid #3cb371;
+  	border-width: 1px 1px 3px;
+	  margin-bottom: 10px;
+    }
+
+  .commentcontainer {
+    background-color: #3cb371;
+    color: #ffffff;
+    font-weight: normal;
+    font-size:24px;
+    text-align: center;
+    padding: 45px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  
+  p.commentp {
+    color: #fcd000;
+    font-size: 14px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    font-style: italic;
+    padding-top: 10px;
   }
 
+  
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev{
+   display:block;
+  }
+
+  /*Add Comment form*/
   .commform {
     max-width: 60%;
     padding: 10px 20px;
@@ -463,18 +549,81 @@
     background: #3cb371;
   }
 
+  /*Contact Us section*/
 
   #contactus {
     padding-top:70px;
     padding-bottom:70px;
+    padding-right: 70px;
+    padding-left: 70px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .continfo {
+    overflow: hidden;
+    float: right;
+    width: 45%;
+    padding: 10px 25px 30px 25px;
+  }
+
+  p.conthead {
+    color: black;
+    font-size: 20px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    padding-top: 20px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+
+  p.conttel {
+    color: black;
+    font-size: 15px; 
+    text-transform: uppercase; 
+    font-style: italic;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  a.strbut:link,
+  a.strbut:visited,
+  a.strbut:hover,
+  a.strbut:active {
+    color: white;
+  }
+
+  .strbutton {
+      position: relative;
+      display: block;
+      padding: 19px 39px 18px 39px;
+      color: #FFF;
+      margin: 0 auto;
+      background: #3cb371;
+      font-size: 18px;
+      text-align: center;
+      font-style: normal;
+      width: 70%;
+      border: 1px solid #3cb371;
+      border-width: 1px 1px 3px;
+      margin-bottom: 10px;
+  }
+
+  .slogo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .contactform{
-    max-width: 49%;
+    float: left;
+    width: 45%;
     padding: 10px 20px;
     background: #f4f7f8;
-    margin: 10px auto;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
   }
@@ -562,7 +711,7 @@
     color: #ccc;
   }
   
-/* Articles HTML styling */
+/* Articles site styling */
 
 #articlespage {
   padding-top:70px;
@@ -606,4 +755,84 @@
   .hidden
   {
     display: none;
+  }
+
+/*Shops site styling*/
+
+#shopspage {
+  padding-top:70px;
+  padding-bottom:70px;
+  position: relative;
+}  
+
+.shop-grid-container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+  }
+
+  .shop-gchild-info{
+    margin: 20px 30px 50px 200px;
+    text-align: left;
+
+  }
+
+  .shop-gchild-hours{
+    margin: 20px 2px 50px 20px;
+    text-align: left;
+  }
+
+  .shop-gchild-img img{
+    margin: 20px 150px 50px 10px;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 5px;
+  }
+
+  p.shopname {
+    color: #fcd000;
+    font-size: 18px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    padding-top: 8px;
+    padding-bottom: 3px;
+    margin: 0;
+  }
+
+  p.shopopen {
+    color: black;
+    font-size: 13px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    padding-top: 45px;
+    padding-bottom: 3px;
+    margin: 0;
+  }
+
+  p.shoptact {
+    color: black;
+    font-size: 13px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    padding-top: 8px;
+    padding-bottom: 3px;
+    margin: 0;
+  }
+
+
+  .shopdata {
+    list-style-type: none;
+    color: black;
+    font-size: 14px; 
+    padding-top: 5px;
+    margin: 0;
+    padding-left: 2px;
+  }
+
+  .shophours {
+    list-style-type: none;
+    color: black;
+    font-size: 14px; 
+    padding-top: 5px;
+    margin: 0;
+    padding-left: 2px;
   }

@@ -42,28 +42,28 @@ function GetCommentData()
   return result;
 }
 
-function FillInComments(getData)
-{
-  var content = getData();
+// function FillInComments(getData)
+// {
+//   var content = getData();
 
-  var target = document.getElementById('commentbox');
-  target.innerHTML="";
-  var div = null;
+//   var target = document.getElementById('commentbox');
+//   target.innerHTML="";
+//   var div = null;
 
-  for(i=0;i<content.length;i++)
-  {
-    var item = content[i];
-    div = document.createElement('div')
-    div.innerHTML = ''+
-    '<p><em><q>'+item.text+'</q></em></p>'+
-    '<p><i>- '+item.name+'</i></p>';
-    if(i==0)div.classList.add('visible');
-    else div.classList.add('hidden');
+//   for(i=0;i<content.length;i++)
+//   {
+//     var item = content[i];
+//     div = document.createElement('div')
+//     div.innerHTML = ''+
+//     '<p><em><q>'+item.text+'</q></em></p>'+
+//     '<p><i>- '+item.name+'</i></p>';
+//     if(i==0)div.classList.add('visible');
+//     else div.classList.add('hidden');
 
-    target.appendChild(div);
-  }
+//     target.appendChild(div);
+//   }
 
-}
+// }
 
 function getContactUsInfo()
 {
