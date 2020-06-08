@@ -80,6 +80,7 @@
         <a href="articles.php" class="arthead"><h2>Latest Articles</h2></a>
         <div id="articleprev" class="artp-grid-container">
             <div class="artp-gchild">
+                <img src="https://gearpatrol.com/wp-content/uploads/2019/01/10-Best-Indoor-Plants-Gear-Patrol-lead-full.jpg" alt="">
                 <p class="arttit">Title</p>
                 <p class="artdat">2020-06-07</p>
                 <p class="artpar">Lorem ipsum dolor sit amet, consectetur 
@@ -91,6 +92,7 @@
                 congue quisque egestas diam.</p>
             </div>
             <div class="artp-gchild">
+                <img src="https://sporteluxe.com/wp-content/uploads/2017/03/PLANTS.jpg" alt="flower">
                 <p class="arttit">Title</p>
                 <p class="artdat">2020-06-07</p>
                 <p class="artpar">Lorem ipsum dolor sit amet, consectetur 
@@ -102,6 +104,7 @@
                 congue quisque egestas diam.</p>
               </div>
             <div class="artp-gchild">
+                <img src="https://cdn.improb.com/wp-content/uploads/2019/05/Best-Indoor-Plants-for-Everyone.jpg" alt="flower">
                 <p class="arttit">Title</p>
                 <p class="artdat">2020-06-07</p>
                 <p class="artpar">Lorem ipsum dolor sit amet, consectetur 

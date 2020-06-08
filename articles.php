@@ -10,7 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -45,12 +44,12 @@
         
     <div>
         <h2>Latest Articles</h2>
-        <div id="articlelist" class="art-grid-container">
+          <div id="articlelist" class="art-grid-container">
             <div class="art-gchild-img">
-                <img src="https://i.pinimg.com/originals/11/2b/74/112b746a2182417b2a947d949798c968.jpg" alt="flower">
+                <img src="https://gearpatrol.com/wp-content/uploads/2019/01/10-Best-Indoor-Plants-Gear-Patrol-lead-full.jpg" alt="flower">
             </div>
             <div class="art-gchild-artl">
-                <p>This is the title</p>
+                <p><b>This is the title</b></p>
                 <p>Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. 
@@ -61,10 +60,10 @@
                     
             </div>
             <div class="art-gchild-img">
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/plants1-1551895073.png?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*" alt="flower">
+                <img src="https://sporteluxe.com/wp-content/uploads/2017/03/PLANTS.jpg" alt="flower">
             </div>
             <div class="art-gchild-artl">
-                <p>This is an other title</p>
+                <p><b>This is an other title</b></p>
                 <p>Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. 
@@ -74,10 +73,10 @@
                     congue quisque egestas diam. <a href="">Read more >></a></p>
             </div>
             <div class="art-gchild-img">
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/plants1-1551895073.png?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*" alt="flower">
+                <img src="https://cdn.improb.com/wp-content/uploads/2019/05/Best-Indoor-Plants-for-Everyone.jpg" alt="flower">
             </div>
             <div class="art-gchild-artl">
-                <p>This is a third title</p>
+                <p><b>This is a third title</b></p>
                 <p>Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. 
@@ -87,10 +86,10 @@
                     congue quisque egestas diam. <a href="">Read more >></a></p>
             </div>
             <div class="art-gchild-img">
-                <img src="https://i.pinimg.com/originals/11/2b/74/112b746a2182417b2a947d949798c968.jpg" alt="flower">
+                <img src="https://smartgardenguide.com/wp-content/uploads/2020/03/light-requirements-for-indoor-plants-2-783x502.jpg" alt="flower">
             </div>
             <div class="art-gchild-artl">
-                <p>This is yet another the title</p>
+                <p><b>This is yet another the title</b></p>
                 <p>Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. 

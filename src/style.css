@@ -227,6 +227,12 @@
     text-justify: inter-word;
   }
 
+  .artp-gchild img {
+    object-fit: cover;
+    width:333px;
+    height:200px;
+  }
+
   .artp-gchild:hover,
   .artp-gchild:focus {
     cursor: pointer;
@@ -721,29 +727,23 @@
 
 .art-grid-container {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 4fr;
   }
 
   .art-gchild-img {
-    margin-top: 5px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    margin-right: 0px;
+    margin: 20px 30px 50px 180px;
   }
 
   .art-gchild-img img {
     object-fit: cover;
-    width:100px;
-    height:100px;
+    width:160px;
+    height:105px;
   }
 
   .art-gchild-artl {
     background-color:white;
-    margin-top: 5px;
-    margin-left: 0px;
-    margin-right: 50px;
-    margin-bottom: 30px;
-    height: 100px;
+    height: 110px;
+    margin: 20px 150px 50px 10px;
   }
 
   /* For hiding/showing elements with JS */
