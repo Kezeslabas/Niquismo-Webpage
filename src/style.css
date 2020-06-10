@@ -181,6 +181,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 20px;
+    overflow: hidden;
   }
 
   .artp-gchild {
@@ -944,6 +945,7 @@ a.artabut:active {
     padding-bottom: 20px;
     padding-left: 100px;
     padding-right: 100px;
+    overflow: hidden;
   }
 
   .opartp-gchild {
