@@ -224,11 +224,11 @@
           </div>
         </div>
 
-        <button class="button" onclick="addComment()">Leave a comment >></button>
+        <button id="btn_comm" class="button" onclick="addComment()">Leave a comment >></button>
         <div class="commform" id="commform">
         <!-- Comments form-->
         <h3>Leave a comment for us!</h3>
-        <form action="">
+        <form action="#btn_comm" onsubmit="submitComment(this)">
             <input type="text" id="fname" name="fname" placeholder="Your Name"><br>
             <textarea name="fcomment" rows="6" columns="70" placeholder="Please leave a comment"></textarea>
             <input type="submit" value="Send">

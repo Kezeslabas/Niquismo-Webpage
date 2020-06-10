@@ -70,6 +70,29 @@ function getContactUsInfo()
 
 }
 
+function submitComment(form)
+{
+  var comment = form.fname + form.fcomment;
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function()
+  {
+    if(xhr.readyState == 4 && this.status == 200)
+    {
+      if(xhr.response)
+      {
+        
+      }
+      else
+      {
+
+      }
+    }
+  }
+  xhr.open('GET','http://localhost/src/server/?comment');
+  xhr.send();
+};
+
+
 function addComment() {
     var x = document.getElementById("commform");
     if (x.style.display === "block") {
