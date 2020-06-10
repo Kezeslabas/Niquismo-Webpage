@@ -844,3 +844,106 @@ a.artabut:active {
     margin: 0;
     padding-left: 2px;
   }
+
+  /*Opened article style*/
+
+  #openedarticle {
+    padding-bottom:30px;
+    position: relative;
+    border-left: 20px solid rgb(9, 102, 9);
+    border-right: 20px solid rgb(9, 102, 9);
+  }  
+
+  .opartart {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .opartt img {
+    object-fit: cover;
+    margin-top:50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 400px;
+  }
+  
+  h2.oparttitle {
+    color: black;
+    text-transform: uppercase; 
+    font-weight: bold; 
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  
+  p.opartartin {
+    color: black;
+    font-size: 14px; 
+    text-transform: uppercase; 
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  p.opartartp {
+    color: black;
+    font-size: 14px; 
+    padding-bottom: 20px;
+  }
+
+  p.opartmore {
+    color: black;
+    font-weight: bold; 
+    text-transform: uppercase; 
+    padding-bottom: 0px;
+    padding-top: 15px;
+    text-align: center;
+    margin: 0px;
+  }
+
+  #openart {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .opartp-gchild {
+    margin: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .opartp-gchild img {
+    object-fit: cover;
+    width:220px;
+    height:130px;
+    margin-bottom: 0px;
+  }
+
+  .opartp-gchild:hover,
+  .opartp-gchild:focus {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  p.oparttit {
+    color: black;
+    font-size: 16px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+
+  p.opartdat {
+    color: black;
+    font-size: 10px; 
+    font-style: italic;
+    margin-top: 2px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
