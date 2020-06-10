@@ -693,7 +693,7 @@
   padding-top:70px;
   padding-bottom:70px;
   position: relative;
-  /* border-left: 20px solid rgb(9, 102, 9);
+  border-left: 20px solid rgb(9, 102, 9);
   border-right: 20px solid rgb(9, 102, 9); */
 }  
 
@@ -765,6 +765,7 @@ a.artabut:active {
   }
 
 /*Shops site styling*/
+
 
 #shopspage {
   padding-top:70px;
