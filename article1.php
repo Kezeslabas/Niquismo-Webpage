@@ -20,7 +20,7 @@
     ?>
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="font-family:'Book Antiqua'">
     
   <header id="header">
     <div class="container">

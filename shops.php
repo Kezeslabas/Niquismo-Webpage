@@ -20,7 +20,7 @@
       echo('<div id="store_data" style="display:none">'.$contents.'</div>');
     ?>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="font-family:'Book Antiqua'">
     
   <header id="header">
     <div class="container">

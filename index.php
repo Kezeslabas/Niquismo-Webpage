@@ -116,7 +116,7 @@
                 congue quisque egestas diam.</p></a>
             </div>
         </div>
-        <button class="button"><a class="artbut" href="articles.php">More Aricles >></a></button>
+        <button class="button"><a class="artbut" href="articles.php">More Articles >></a></button>
     </section>
 
   <!-- Our Services -->  
