@@ -34,7 +34,7 @@
 
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="font-family:'Book Antiqua'">
 
 
   
@@ -234,7 +234,15 @@
             <input type="submit" value="Send">
           </form>
         </div>
+
+        <!--Answer for sending comment -->
+        <div>
+          <p class="commentok"> Thank you for your feedback! </p>
+    </div>
+
     </section>
+
+  <!-- Contasct Us -->  
 
     <section id="contactus" class="container-fluid">
         <h2>Contact Us</h2>
@@ -255,6 +263,15 @@
               <input type="submit" value="Send" onclick="getContactUsInfo()"/>
           </form>
           </div>
+
+          <!-- contact answer-->
+          <div>
+            <p class="contokanswer"> Email sent successfully! We will contact you soon! </p>
+            <p class="contnotokanswer"> Ups something went wrong. Please try again later! </p>
+          </div>
+
+
+
           <div class="continfo">
             <p class="conthead">Give us a call:</p>
             <p class="conttel">+23 45 3456 896</p>
