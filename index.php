@@ -19,10 +19,19 @@
       $contents = file("./src/data/articles.cnt");
       echo('<div id="art_data" style="display:none">');
       $length = count($contents);
-      if($length > 3)$length = 3;
-      for($i = 0; $i<$length; $i++)
+      if($length > 3)
       {
-        echo($contents[$i]);
+        for($i = $length-1; $i>=$length-3; $i--)
+        {
+          echo($contents[$i]."\n");
+        }
+      }
+      else
+      {
+        for($i = $length-1; $i>=0; $i--)
+        {
+          echo($contents[$i]."\n");
+        }
       }
       echo('</div>');
 
@@ -228,7 +237,7 @@
         <div class="commform" id="commform">
         <!-- Comments form-->
         <h3>Leave a comment for us!</h3>
-        <form action="#btn_comm" onsubmit="submitComment(this)">
+        <form id="commentform" action="#btn_comm">
             <input type="text" id="fname" name="fname" placeholder="Your Name"><br>
             <textarea name="fcomment" rows="6" columns="70" placeholder="Please leave a comment"></textarea>
             <input type="submit" value="Send">
@@ -237,7 +246,7 @@
 
         <!--Answer for sending comment -->
         <div>
-          <p class="commentok"> Thank you for your feedback! </p>
+          <p id="commentok" class="commentok" style="display:none"> Thank you for your feedback! </p>
     </div>
 
     </section>
@@ -260,7 +269,7 @@
               <option value="other">Other</option>
               </select>      
               <textarea name="field3" rows="10" placeholder="Tell us your problems or questions and we will answer them in an email."></textarea>
-              <input type="submit" value="Send" onclick="getContactUsInfo()"/>
+              <input type="submit" value="Send"/>
           </form>
           </div>
 

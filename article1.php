@@ -14,9 +14,77 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <?php
-      // Get Article Contents (only first 3 articles)
-      $contents = file_get_contents("./src/data/articles.cnt");
-      echo('<div id="art_data" style="display:none">'.$contents.'</div>');
+      // Get article by id
+      $article = null;
+      $lastArticles = [];
+      $recommends = [];
+      if(isset($_GET['id']))
+      {
+        $id = $_GET['id'];
+        
+        $contents = file("./src/data/articles.cnt");
+        
+        $lastCount = 0;
+        $length = count($contents);
+        if($length>=5)
+        {
+          $lastCount = 4;
+          $r = 0;
+          for($i = $length-1; $i>=0; $i--)
+          {
+            if($i!=$id)
+            {
+              $recommends[] = $i.';';
+              $r = $r + 1;
+            }
+            if($r>=4)break;
+          }
+        }
+        else
+        {
+          $lastCount = $length;
+          for($i = 0;$i<$length;$i++)
+          {
+            if($i!=$id)$recommends[] = $i.';';
+          }
+        }
+        $id = $id.';';
+        for($i = $length-1; $i>=0; $i--)
+        {
+          $item = $contents[$i];
+          if(startsWith($item,$id))
+          {
+            $article = $item;
+          }
+          else
+          {
+            for($j = 0; $j<count($recommends);$j++)
+            {
+              $reco = $recommends[$j];
+              if(startsWith($item,$reco))
+              {
+                $lastArticles[] = $item;
+                $lastCount = $lastCount - 1;
+              }
+            }
+          }
+          if($article && $lastCount<=0)break;
+        }
+
+      }
+      echo('<div id="art_data" style="display:none">'.$article.'</div>');
+      echo('<div id="last_data" style="display:none">');
+      for($i = 0; $i<count($lastArticles);$i++)
+      {
+        echo($lastArticles[$i]."\n");
+      }
+      echo('</div>');
+
+      function startsWith ($string, $startString) 
+      { 
+          $len = strlen($startString); 
+          return (substr($string, 0, $len) === $startString); 
+      } 
     ?>
 
 </head>
@@ -43,7 +111,7 @@
   <section id="openedarticle" class="container-fluid">
         
     <div class="opartt">
-        
+        <div id="maintarget">
         <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/plants-index-1558561755.png?crop=0.945xw:0.707xh;0,0.190xh&resize=1200:*" alt="">
         <h2 class="oparttitle">This is the article you opened</h2>
         <div class="opartart">
@@ -59,6 +127,7 @@
             <p class="opartartp">Sapien eget mi proin sed libero enim sed. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Luctus venenatis lectus magna fringilla urna. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Tortor dignissim convallis aenean et tortor at. Scelerisque eu ultrices vitae auctor eu augue ut. Vitae et leo duis ut diam quam. Nunc sed blandit libero volutpat sed cras ornare arcu. Orci ac auctor augue mauris augue. Lorem ipsum dolor sit amet consectetur. Augue mauris augue neque gravida in fermentum et sollicitudin ac. Cursus eget nunc scelerisque viverra mauris in aliquam. Ac felis donec et odio pellentesque diam volutpat commodo. Habitant morbi tristique senectus et netus et malesuada fames ac. Sodales ut etiam sit amet nisl purus in. Nec tincidunt praesent semper feugiat nibh. Tellus elementum sagittis vitae et. Varius quam quisque id diam vel quam elementum pulvinar etiam. Aliquam ultrices sagittis orci a scelerisque. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. </p>
             <p class="opartartp">Vitae tortor condimentum lacinia quis vel. Tempor nec feugiat nisl pretium fusce. Felis imperdiet proin fermentum leo vel orci porta. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Mauris pharetra et ultrices neque ornare aenean. Accumsan in nisl nisi scelerisque eu ultrices vitae. Quam lacus suspendisse faucibus interdum posuere. Risus sed vulputate odio ut enim blandit volutpat maecenas. Eros in cursus turpis massa tincidunt dui ut. Arcu bibendum at varius vel pharetra vel. </p>
             <p class="opartartp">Proin nibh nisl condimentum id venenatis. Scelerisque eu ultrices vitae auctor eu augue. Orci a scelerisque purus semper eget duis. Interdum consectetur libero id faucibus nisl tincidunt eget. Aliquet bibendum enim facilisis gravida neque. At risus viverra adipiscing at in tellus integer feugiat scelerisque. Commodo quis imperdiet massa tincidunt nunc pulvinar. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Eget nulla facilisi etiam dignissim diam quis. Enim eu turpis egestas pretium aenean pharetra magna ac. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+        </div>
         </div>
 
         <p class="opartmore">More to read</p>
@@ -105,5 +174,5 @@
         </div>
       </footer><!-- #footer -->
 </body>
-<script src="./src/scripts/articles.js"></script>
+<script src="./src/scripts/article1.js"></script>
 </html>

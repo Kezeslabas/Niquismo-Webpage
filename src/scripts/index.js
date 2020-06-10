@@ -1,31 +1,77 @@
-// Articles (3 latest)
-//  Date
-//  Thumbnail
-//  Title
-//  Content
+// Articles
+// ------------
+FillInLatestArticles(GetArticleData);
 
-// Gallery (4 random)
-//  Imgage urls
-
-// Comments (All authorized?)
+// Comments 
+// ------------
 FillInComments(GetCommentData);
+setSubmitComment();
 
-// Draw Out Article preview
 
-// Draw out Gallery Preview
 
-// Request data 
+// Articles for main page
+// ------------
 function GetArticleData()
 {
   var data = document.getElementById('art_data').textContent;
+  var result = [];
+  data = data.trim();
+  data = data.split('\n');
 
+  for(i=0;i<data.length;i++)
+  {
+    var item = data[i];
+    if(item)
+    {
+      var item = item.split(';');
+      var article = {
+        id: item[0],
+        date: item[1],
+        image: item[2],
+        title: item[3],
+        prewiev: item[4]
+      }
+      result.push(article);
+    }
+  }
+
+  // console.log(result);
+  return result;
 }
+function FillInLatestArticles(getData)
+{
+  var content = getData();
+  
+  
+  var target = document.getElementById('articleprev');
+  target.innerHTML="";
+
+  var div = null;
+  for(i=0;i<content.length;i++)
+  {
+    var item = content[i];
+
+    div = document.createElement('div');
+    div.className="artp-gchild";
+    div.innerHTML = '<a class="artabut" href="article1.php?id='+item.id+'">'+
+    '<img src="'+item.image+'" alt="">'+
+    '<p class="arttit">'+item.title+'</p>'+
+    '<p class="artdat">'+item.date+'</p>'+
+    '<p class="artpar">'+item.prewiev+'</p></a>';
+
+    target.appendChild(div);
+  }
+}
+
+
+// Comment Fill, Submission and Setup
+// ------------
 function GetCommentData()
 {
   var data = document.getElementById('comm_data').textContent;
   
   var result = [];
-  data = data.split('\n'); //Ne engedjünk \n karaktert comment input-nál
+  data = data.split('\n');
   
   for(i=0;i<data.length;i++)
   {
@@ -38,7 +84,7 @@ function GetCommentData()
     result.push(comment);
   }
 
-  console.log(result);
+  // console.log(result);
   return result;
 }
 
@@ -65,33 +111,62 @@ function FillInComments(getData)
 
 }
 
-function getContactUsInfo()
-{
-
-}
-
 function submitComment(form)
 {
-  var comment = form.fname + form.fcomment;
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function()
+  var comment = null;
+  if(form.fname.value && form.fcomment.value)
   {
-    if(xhr.readyState == 4 && this.status == 200)
+    comment = form.fname.value +';'+ form.fcomment.value
+    comment = comment.replace("\n","");
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
     {
-      if(xhr.response)
+      if(xhr.readyState == 4)
       {
-        
-      }
-      else
-      {
-
+        var msg = document.getElementById('commentok');
+        msg.style.display = 'block';
+        if(this.status == 200)
+        {
+          console.log(xhr.response);
+          var response = JSON.parse(xhr.response);
+          if(response)
+          {
+            msg.textContent = "Thank you for your feedback!";
+          }
+          else
+          {
+            msg.textContent = "Ups something went wrong. Please try again later!";
+          }
+          form.fname.value = "";
+          form.fcomment.value = "";
+        }
+        else
+        {
+          msg.textContent = "Ups something went wrong. Please try again later!";
+        }
       }
     }
+    xhr.open("POST",'http://localhost/Niquismo Website/src/server/server.php',true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("comment="+comment);
   }
-  xhr.open('GET','http://localhost/src/server/?comment');
-  xhr.send();
+  else
+  {
+    var msg = document.getElementById('commentok');
+    msg.style.display = 'block';
+    msg.textContent = "You have to add a name and text to your comment!";
+  }
 };
 
+function setSubmitComment()
+{
+  var submit = document.getElementById('commentform');
+  submit.addEventListener('submit', function(e)
+  {
+    e.preventDefault();
+    submitComment(this);
+  });
+}
 
 function addComment() {
     var x = document.getElementById("commform");
@@ -100,10 +175,12 @@ function addComment() {
     } else {
       x.style.display = "block";
     }
+    var msg = document.getElementById('commentok');
+    msg.style.display = 'none';
   }
 
-  // Gallery
-
+// Gallery
+// ------------
   function openModal() {
     document.getElementById("myModal").style.display = "block";
   }
@@ -126,17 +203,11 @@ function addComment() {
   function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
     slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
+
   }
