@@ -99,35 +99,7 @@
     min-width: 180px;
   }
   
-  /* Nav Menu Arrows */
-  .sf-arrows .sf-with-ul {
-    padding-right: 30px;
-  }
   
-  .sf-arrows .sf-with-ul:after {
-    content: "\f107";
-    position: absolute;
-    right: 15px;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  .sf-arrows ul .sf-with-ul:after {
-    content: "\f105";
-  }
-  
-  /* Nav Meu Container */
-  #nav-menu-container {
-    float: right;
-    margin: 0;
-  }
-  
-  @media (max-width: 768px) {
-    #nav-menu-container {
-      display: none;
-    }
-  }
   
   /* Nav Meu Styling */
   .nav-menu a {
@@ -167,18 +139,7 @@
     transform: scaleX(1);
   }
   
-  .nav-menu ul {
-    margin: 4px 0 0 0;
-    border: 1px solid #e7e7e7;
-  }
   
-  .nav-menu ul li {
-    background: #fff;
-  }
-  
-  .nav-menu ul li:first-child {
-    border-top: 0;
-  }
 
   h2 {
     text-align: center;
@@ -205,6 +166,7 @@
     padding-bottom:70px;
     padding-right: 70px;
     padding-left: 70px;
+    background: #DCDCDC;
   } 
 
   a.arthead:link,
@@ -284,15 +246,18 @@
     border-bottom: 10px solid rgb(9, 102, 9);
   }
 
-  #gallery {
+  
+
+  /* Gallery */
+
+   #gallery {
     padding-top:70px;
     padding-bottom:70px;
     padding-right: 70px;
     padding-left: 70px;
+    background: #DCDCDC;
   }
 
-  /* Gallery */
-  
   .row > .column {
     padding: 0 8px;
   }
@@ -324,14 +289,14 @@
   
   /* Modal Content */
   .modal-content {
-    position: relative;
-    background-color: #fefefe;
+    position: fixed;
+    background-color: black;
     margin: auto;
     padding: 0;
     width: 100%;
     max-width: 800px;
     height: 100%;
-    max-height: 500px;
+    max-height: 300px;
   }
   
   /* The Close Button */
@@ -346,7 +311,7 @@
   
   .close:hover,
   .close:focus {
-    color: #999;
+    color: white;
     text-decoration: none;
     cursor: pointer;
   }
@@ -368,7 +333,7 @@
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 20px;
     transition: 0.6s ease;
@@ -407,7 +372,7 @@
     text-align: center;
     background-color: black;
     padding: 2px 16px;
-    color: white;
+    color: black;
   }
   
   .demo {
@@ -434,6 +399,9 @@
     padding-bottom:70px;
     padding-right: 70px;
     padding-left: 70px;
+    background-color: #DCDCDC;
+    border-top: 50px solid rgb(46, 45, 45);
+    border-bottom: 10px solid rgb(9, 102, 9);
   }
 
   /*Comments container*/
@@ -564,6 +532,7 @@
     padding-left: 70px;
     overflow: hidden;
     text-align: center;
+    background-color: #DCDCDC;
   }
 
   .continfo {
@@ -681,7 +650,7 @@
     padding: 19px 39px 18px 39px;
     color: #FFF;
     margin: 0 auto;
-    background: #00ff7f;
+    background: #3cb371;
     font-size: 18px;
     text-align: center;
     font-style: normal;
@@ -801,6 +770,7 @@ a.artabut:active {
   padding-top:70px;
   padding-bottom:70px;
   position: relative;
+  background: #DCDCDC;
 }  
 
 .shop-grid-container {

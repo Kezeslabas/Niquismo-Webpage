@@ -43,13 +43,13 @@
         <div class="container">
           <nav class="navbar bg-dark navbar-dark fixed-top" id="nav-menu-container">
             <ul class="nav-menu">
-              <li class="menu-active"><a href="#hero">Home</a></li>
-              <li><a href="#aboutus">About Us</a></li>
-              <li><a href="#articles">Articles</a></li>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contactus">Contact Us</a></li>
-              <li><a href="shops.php">Stores</a></li>
+              <li class="menu-active"><a class="artbut" href="#hero">Home</a></li>
+              <li><a class="artbut" href="#aboutus">About Us</a></li>
+              <li><a class="artbut" href="#articles">Articles</a></li>
+              <li><a class="artbut" href="#services">Our Services</a></li>
+              <li><a class="artbut" href="#gallery">Gallery</a></li>
+              <li><a class="artbut" href="#contactus">Contact Us</a></li>
+              <li><a class="artbut" href="shops.php">Stores</a></li>
             </ul>
           </nav><!-- #nav-menu-container -->
         </div>
@@ -119,6 +119,8 @@
         <button class="button"><a class="artbut" href="articles.php">More Aricles >></a></button>
     </section>
 
+  <!-- Our Services -->  
+
     <section id="services" class="container-fluid">
         <h2>Our Services</h2>
         <p>
@@ -130,29 +132,12 @@
             libero. In eu mi bibendum neque egestas 
             congue quisque egestas diam. 
         </p>
-        <a href="#contactus">Contact Us >></a>
-        <a href="shops.php">Stores >></a>
+        <button class="button"><a class="artbut" href="#contactus">Contact Us >></a></button>
+        <button class="button"><a class="artbut" href="shops.php">Stores >></a></button>
     </section>
 
 
-    
-
-
-    <!--<section id="gallery" class="container-fluid">
-        <div>
-            <h2>Gallery</h2>
-            <p>photos from our customers</p>
-            <a href="">check out our<br> instagram<br> >></a>
-        </div>
-        <div>
-            <img src="./res/sampleplant.png" alt="">
-            <img src="./res/sampleplant.png" alt="">
-            <img src="./res/sampleplant.png" alt="">
-            <img src="./res/sampleplant.png" alt="">
-            <img src="./res/sampleplant.png" alt="">
-        </div> 
-        
-    </section> -->
+  
 
 <!-- Gallery -->
 <section id="gallery">
@@ -205,18 +190,7 @@
     </div>
 
 
-    <div class="column">
-      <img class="demo cursor" src="res/plant7.jpg" style="width: 100%" onclick="currentSlide(1)" alt="OH NOOO!!!!">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="res/planz8.jpg" style="width: 100%" onclick="currentSlide(2)" alt="NIGERUNDAYO">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="res/ULTIMA.jpg" style="width:100%" onclick="currentSlide(3)" alt="THE ULTIMATE LIFEFORM">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="res/plant10.jpg" style="width:100%" onclick="currentSlide(4)" alt="YARE YARE DAZE">
-    </div>
+    
   </div>
 </div>
     </section>
