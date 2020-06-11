@@ -60,6 +60,7 @@
               <img class="d-block" src="https://cdn.labmanager.com/assets/articleNo/1509/aImg/39230/do-plants-think--l.png" alt="">
 					    <div class="carousel-caption d-none d-md-block">
                 <h3>This is the newest article</h3>
+                <p class="carartdate">2020.06.11</p>
 						    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci esse vitae exercitationem fugit, numquam minus!</p>
               </a>
               </div>
@@ -69,6 +70,7 @@
 					    <img class="d-block" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/poison_plants_guide_slideshow/1800ss_wikimedia_rf_poison_ivy.jpg?resize=650px:*" alt="">
 					    <div class="carousel-caption d-none d-md-block">
 						    <h3>This is another new article</h3>
+                <p class="carartdate">2020.06.11</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci esse vitae exercitationem fugit, numquam minus!</p>
               </a>
 					    </div>
@@ -78,6 +80,7 @@
 					    <img class="d-block" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/plants-index-1558561755.png?crop=0.945xw:0.707xh;0,0.190xh&resize=1200:*" alt="">
 					    <div class="carousel-caption d-none d-md-block">
 						    <h3>This is a fresh article</h3>
+                <p class="carartdate">2020.06.10</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci esse vitae exercitationem fugit, numquam minus!</p>
               </a>
 					    </div>
@@ -87,6 +90,7 @@
 					    <img class="d-block" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/03/31/18/plants.jpg?w968h681" alt="">
 					    <div class="carousel-caption d-none d-md-block">
 						    <h3>This is an important article</h3>
+                <p class="carartdate">2020.06.08</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci esse vitae exercitationem fugit, numquam minus!</p>
               </a>
 					    </div>
@@ -109,7 +113,8 @@
           <img src="https://gearpatrol.com/wp-content/uploads/2019/01/10-Best-Indoor-Plants-Gear-Patrol-lead-full.jpg" alt="flower">
         </div>
         <div class="art-gchild-artl">
-          <p><a class="artabut" href="article1.php"><b>This is the title</b></p>
+          <p class="listarttit"><a class="artabut" href="article1.php"><b>This is the title</b></p>
+          <p class="listartdate">2020.06.10</p>
           <p>Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. 
@@ -122,7 +127,8 @@
           <img src="https://sporteluxe.com/wp-content/uploads/2017/03/PLANTS.jpg" alt="flower">
         </div>
         <div class="art-gchild-artl">
-          <p><a class="artabut" href="article1.php"><b>This is an other title</b></p>
+          <p class="listarttit"><a class="artabut" href="article1.php"><b>This is an other title</b></p>
+          <p class="listartdate">2020.06.09</p>
           <p>Lorem ipsum dolor sit amet, consectetur 
                     et dolore magna aliqua. 
                     Faucibus purus in massa tempor nec. 
@@ -134,7 +140,8 @@
           <img src="https://cdn.improb.com/wp-content/uploads/2019/05/Best-Indoor-Plants-for-Everyone.jpg" alt="flower">
         </div>
         <div class="art-gchild-artl">
-          <p><a class="artabut" href="article1.php"><b>This is a third title</b></p>
+          <p class="listarttit"><a class="artabut" href="article1.php"><b>This is a third title</b></p>
+          <p class="listartdate">2020.06.08</p>
           <p>Lorem ipsum et dolore magna aliqua. 
                     Faucibus purus in massa tempor nec. 
                     Sapien et ligula ullamcorper malesuada proin 
@@ -145,7 +152,8 @@
           <img src="https://smartgardenguide.com/wp-content/uploads/2020/03/light-requirements-for-indoor-plants-2-783x502.jpg" alt="flower">
         </div>
         <div class="art-gchild-artl">
-          <p><a class="artabut" href="article1.php"><b>This is yet another the title</b></p>
+          <p class="listarttit"><a class="artabut" href="article1.php"><b>This is yet another the title</b></p>
+          <p class="listartdate">2020.06.07</p>
           <p>Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. 
@@ -157,6 +165,10 @@
         </div>
       </div> <!-- /.articlelist -->
       <button class="button">More Articles</a></button>
+      <div class="artlistnom">
+        <p class="artlistnop">Sorry, currently we don't have any more articles. </p>
+        <p class="artlistnop">Please come back later.</p>
+      </div>
     </div>
         
     </section>
