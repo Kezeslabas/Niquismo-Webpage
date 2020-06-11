@@ -763,13 +763,24 @@ a.artabut:active {
   margin: auto;
 }
 
+p.carartdate {
+  color: black;
+  font-size: 10px; 
+  font-style: italic;
+  margin-top: 0px;
+  padding-bottom: 2px;
+  margin-bottom: 0px;
+  color: #fff;
+  text-align: center;
+}
+
 .art-grid-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
   }
 
   .art-gchild-img {
-    margin: 20px 30px 50px 180px;
+    margin: 20px 30px 50px 160px;
     /* -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%); */
   }
@@ -783,10 +794,38 @@ a.artabut:active {
   .art-gchild-artl {
     background-color:white;
     height: 110px;
-    margin: 20px 150px 50px 10px;
+    margin: 20px 160px 20px 10px;
     -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   }
+
+  p.listartdate {
+    color: black;
+    font-size: 10px; 
+    font-style: italic;
+    margin-top: 0px;
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+  }
+
+  p.listarttit {
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+  }
+
+  .artlistnom {
+    position: relative;
+  	display: block;
+  	padding: 15px 5px 5px 5px;
+	  color: black;
+    margin: 0 auto;
+    font-weight: bold;
+  	font-size: 18px;
+	  text-align: center;
+  	font-style: normal;
+  	width: 75%;
+	  margin-bottom: 10px;
+    }
 
   /* For hiding/showing elements with JS */
   .visible
@@ -911,7 +950,17 @@ a.artabut:active {
     color: black;
     text-transform: uppercase; 
     font-weight: bold; 
-    padding-bottom: 30px;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+
+  p.opartdate {
+    color: black;
+    font-size: 12px; 
+    font-style: italic;
+    margin-top: 0px;
+    padding-bottom: 35px;
+    margin-bottom: 0px;
     text-align: center;
   }
   

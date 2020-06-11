@@ -114,6 +114,7 @@
         <div id="maintarget">
         <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/plants-index-1558561755.png?crop=0.945xw:0.707xh;0,0.190xh&resize=1200:*" alt="">
         <h2 class="oparttitle">This is the article you opened</h2>
+        <p class="opartdate">2020.06.11.</p>
         <div class="opartart">
             <p class="opartartin">
                 This is the introductory paragraph. This is the introductory paragraph. 
