@@ -102,7 +102,6 @@ function RequestLatestArticles(target,append)
   xhr.open("POST",'http://localhost/Niquismo Website/src/server/server.php',true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send("from="+articleN);
-  console.log(articleN);
 }
 
 function ConvertArticleData(data)

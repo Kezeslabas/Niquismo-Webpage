@@ -11,6 +11,9 @@ setSubmitComment();
 // ------------
 FillInGallery(GetGalleryData);
 
+// Mail
+// ------------
+setSubmitMail();
 
 // Articles for main page
 // ------------
@@ -38,7 +41,6 @@ function GetArticleData()
     }
   }
 
-  // console.log(result);
   return result;
 }
 function FillInLatestArticles(getData)
@@ -87,7 +89,6 @@ function GetCommentData()
     result.push(comment);
   }
 
-  // console.log(result);
   return result;
 }
 
@@ -130,7 +131,6 @@ function submitComment(form)
         msg.style.display = 'block';
         if(this.status == 200)
         {
-          console.log(xhr.response);
           var response = JSON.parse(xhr.response);
           if(response)
           {
@@ -181,6 +181,70 @@ function addComment() {
     var msg = document.getElementById('commentok');
     msg.style.display = 'none';
   }
+
+// Mail
+// ------------
+function setSubmitMail()
+{
+  var submit = document.getElementById('mail_form');
+  submit.addEventListener('submit', function(e)
+  {
+    e.preventDefault();
+    SubmitMail(this);
+  });
+}
+
+function SubmitMail(form)
+{
+  var mail = {
+    name: form.cname.value,
+    email: form.cemail.value,
+    job: form.job.value,
+    text: form.text.value
+  }
+  if(mail.name && mail.email && mail.job && mail.text)
+  {
+    mail = JSON.stringify(mail);
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
+    {
+      if(xhr.readyState == 4)
+      {
+        var msg = document.getElementById('mail_msg');
+        msg.style.display = 'block';
+        if(this.status == 200)
+        {
+          console.log(xhr.response);
+          var response = JSON.parse(xhr.response);
+          if(response)
+          {
+            msg.textContent = "Email sent successfully! We will contact you soon!";
+          }
+          else
+          {
+            msg.textContent = "Ups something went wrong. Please try again later!";
+          }
+          form.cname.value="";
+          form.cemail.value="";
+          form.text.value="";
+        }
+        else
+        {
+          msg.textContent = "Ups something went wrong. Please try again later!";
+        }
+      }
+    }
+    xhr.open("POST",'http://localhost/Niquismo Website/src/server/server.php',true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("mail="+mail);
+  }
+  else
+  {
+    var msg = document.getElementById('mail_msg');
+    msg.style.display = 'block';
+    msg.textContent = "Please fill in every field!";
+  }
+}
 
 // Gallery
 // ------------

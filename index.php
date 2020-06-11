@@ -278,11 +278,11 @@
     <section id="contactus" class="container-fluid">
         <h2>Contact Us</h2>
           <div class="contactform">
-          <form action="">
+          <form id="mail_form" action="">
               <input type="text" name="cname" placeholder="Your Name *">
               <input type="email" name="cemail" placeholder="Your Email *">
               <label for="job">Client organization:</label>
-              <select id="job" name="field4">
+              <select id="job" name="job">
               <option value="enterprise">Enterprise</option>
               <option value="company">Company</option>
               <option value="pubinst">Public Institution</option>
@@ -290,13 +290,13 @@
               <option value="privpers">Private Person</option>
               <option value="other">Other</option>
               </select>      
-              <textarea name="field3" rows="10" placeholder="Tell us your problems or questions and we will answer them in an email."></textarea>
+              <textarea name="text" rows="10" placeholder="Tell us your problems or questions and we will answer them in an email."></textarea>
               <input type="submit" value="Send"/>
           </form>
           </div>
 
           <!-- contact answer-->
-          <div>
+          <div id="mail_msg" style="display:none">
             <p class="contokanswer"> Email sent successfully! We will contact you soon! </p>
             <p class="contnotokanswer"> Ups something went wrong. Please try again later! </p>
           </div>

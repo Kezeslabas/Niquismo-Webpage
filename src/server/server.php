@@ -33,6 +33,21 @@ else if (isset($_POST['from']))
         $response['sent'] = $response['sent'] + 1;
     }
 }
+else if(isset($_POST['mail']))
+{
+    $mail = json_decode($_POST['mail'], JSON_UNESCAPED_UNICODE);
+
+    $to = 'kezeslabastester@gmail.com';
+    $subject = 'Niquismo mail: '.$mail['name'];
+    $from = 'From: '.$mail['email']."\r\n";
+    $name = 'Name: '.$mail['name']."\r\n";
+    $job = 'Job: '.$mail['job']."\r\n";
+    $message = $mail['text'];
+    $header = $from.$name.$job;
+
+    // $response = mail($to,$subject,$message,$header);
+    $response = $subject."\n".$header.$message;
+}
 
 echo json_encode($response, JSON_UNESCAPED_UNICODE);
 ?>
