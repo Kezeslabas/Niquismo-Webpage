@@ -271,17 +271,20 @@ function FillInGallery(getData)
 
   var images = 4;
   if(content.length<images)images = content.length;
-  for(i=0;i<images;i++)
+  for(i=0;i<content.length;i++)
   {
     var item = content[i];
-    target.innerHTML = target.innerHTML +
-    '<div class="column">'+
-    '<img src="'+item+'" style="width:100% " onclick="openModal();currentSlide('+(i+1)+')" class="hover-shadow cursor">'+
-    '</div>';
+    if(i<images)
+    {
+      target.innerHTML = target.innerHTML +
+      '<div class="column">'+
+      '<img src="'+item+'" style="width:100% " onclick="openModal();currentSlide('+(i+1)+')" class="hover-shadow cursor">'+
+      '</div>';
+    }
 
     modal.innerHTML = modal.innerHTML +
     '<div class="mySlides">'+
-    '<div class="numbertext">'+(i+1)+' / '+images+'</div>'+
+    '<div class="numbertext">'+(i+1)+' / '+content.length+'</div>'+
     '<img src="'+item+'" style="width:100%">'+
     '</div>';
   }
