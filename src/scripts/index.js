@@ -26,7 +26,7 @@ function GetArticleData()
     var item = data[i];
     if(item)
     {
-      var item = item.split(';');
+      item = item.split(';');
       var article = {
         id: item[0],
         date: item[1],

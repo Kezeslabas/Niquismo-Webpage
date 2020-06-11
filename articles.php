@@ -14,9 +14,35 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <?php
-      // Get Article Contents (only first 3 articles)
-      $contents = file_get_contents("./src/data/articles.cnt");
-      echo('<div id="art_data" style="display:none">'.$contents.'</div>');
+      //Get Highlighted Articles
+      $articles = '';
+      $highlights = file_get_contents('./src/data/highlights.cnt');
+      $highlights = explode(';',$highlights);
+      $left = 4;
+      $contents = file("./src/data/articles.cnt");
+      $length = count($contents);
+      for($i = 0;$i<$length;$i++)
+      {
+        $item = $contents[$i];
+        for($j=0;$j<count($highlights);$j++)
+        {
+          if(startsWith($item,$highlights[$j]))
+          {
+            $articles = $articles.$item;
+            $left = $left - 1;
+            break;
+          }
+        }
+        if($left<=0)break;
+      }
+      
+      echo('<div id="art_data" style="display:none">'.$articles.'</div>');
+
+      function startsWith ($string, $startString) 
+      { 
+          $len = strlen($startString); 
+          return (substr($string, 0, $len) === $startString); 
+      } 
     ?>
 
 </head>
@@ -54,7 +80,7 @@
 				    <li data-target="#main-carousel" data-slide-to="3"></li>
 			    </ol><!-- /.carousel-indicators -->
 			
-			    <div class="carousel-inner">
+			    <div id="high_arts" class="carousel-inner">
 				    <div class="carousel-item active">
               <a class="artcbut" href="article1.php">
               <img class="d-block" src="https://cdn.labmanager.com/assets/articleNo/1509/aImg/39230/do-plants-think--l.png" alt="">
@@ -164,10 +190,12 @@
                     
         </div>
       </div> <!-- /.articlelist -->
-      <button class="button">More Articles</a></button>
-      <div class="artlistnom">
-        <p class="artlistnop">Sorry, currently we don't have any more articles. </p>
-        <p class="artlistnop">Please come back later.</p>
+      <div id="article_button">
+        <button class="button">More Articles</button>
+        <div class="artlistnom">
+          <p class="artlistnop">Sorry, currently we don't have any more articles. </p>
+          <p class="artlistnop">Please come back later.</p>
+        </div>
       </div>
     </div>
         

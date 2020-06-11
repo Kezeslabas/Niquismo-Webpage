@@ -458,6 +458,7 @@
   .carousel-item-next,
   .carousel-item-prev{
    display:block;
+   text-shadow: 1px 1px 0 #000;
   }
 
   /*Add Comment form*/
