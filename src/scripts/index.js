@@ -7,6 +7,9 @@ FillInLatestArticles(GetArticleData);
 FillInComments(GetCommentData);
 setSubmitComment();
 
+// Gallery
+// ------------
+FillInGallery(GetGalleryData);
 
 
 // Articles for main page
@@ -181,33 +184,73 @@ function addComment() {
 
 // Gallery
 // ------------
-  function openModal() {
-    document.getElementById("myModal").style.display = "block";
-  }
-  
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-  }
-  
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
+function GetGalleryData()
+{
+  var data = document.getElementById('gal_data').textContent;
 
+  data = data.trim();
+  data = data.substring(0, data.length-1);
+  data = data.split(';');
+
+
+  return data;
+}
+
+function FillInGallery(getData)
+{
+  var content = getData();
+
+  var target = document.getElementById('gal_list');
+  target.innerHTML="";
+  var modal = document.getElementById('gal_modal');
+  modal.innerHTML = "";
+
+  var images = 4;
+  if(content.length<images)images = content.length;
+  for(i=0;i<images;i++)
+  {
+    var item = content[i];
+    target.innerHTML = target.innerHTML +
+    '<div class="column">'+
+    '<img src="'+item+'" style="width:100% " onclick="openModal();currentSlide('+(i+1)+')" class="hover-shadow cursor">'+
+    '</div>';
+
+    modal.innerHTML = modal.innerHTML +
+    '<div class="mySlides">'+
+    '<div class="numbertext">'+(i+1)+' / '+images+'</div>'+
+    '<img src="'+item+'" style="width:100%">'+
+    '</div>';
   }
+}
+
+
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+
+}

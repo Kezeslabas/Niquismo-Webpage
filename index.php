@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
     <?php
-      // Get Article Contents (only first 3 articles)
+      // Get Article Contents (only last 3 articles)
       $contents = file("./src/data/articles.cnt");
       echo('<div id="art_data" style="display:none">');
       $length = count($contents);
@@ -38,6 +38,27 @@
       // Get Comment Contents
       $contents = file_get_contents("./src/data/comments.cnt");
       echo('<div id="comm_data" style="display:none">'.$contents.'</div>');
+
+      // Get Gallery images
+      $gallery = '';
+      $dir = './res/gallery/';
+      if(is_dir($dir))
+      {
+          $dh = opendir($dir);
+          if($dh)
+          {
+              $file = readdir($dh);
+              while($file!==false)
+              {
+                  if($file!='' && $file!='.' && $file!='..')
+                  {
+                      $gallery = $gallery.$dir.$file.';';
+                  }
+                  $file = readdir($dh);
+              }
+          }
+      }
+      echo('<div id="gal_data" style="display:none">'.$gallery.'</div>');
 
     ?>
 
@@ -152,7 +173,7 @@
 <section id="gallery">
 <h2 style="text-align:center">Gallery</h2>
 
-<div class="row">
+<div id="gal_list" class="row">
   <div class="column">
     <img src="res/plant7.jpg" style="width:100% " onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
   </div>
@@ -171,26 +192,27 @@
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
 
-    <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <img src="res/plant7.jpg" style="width:100%">
-    </div>
+    <div id="gal_modal">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="res/plant7.jpg" style="width:100%">
+      </div>
 
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-      <img src="res/planz8.jpg" style="width:100%">
-    </div>
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="res/planz8.jpg" style="width:100%">
+      </div>
 
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-      <img src="res/ULTIMA.jpg" style="width:100%">
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="res/ULTIMA.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="res/plant10.jpg" style="width:100%">
+      </div>
     </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-      <img src="res/plant10.jpg" style="width:100%">
-    </div>
-    
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
